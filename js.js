@@ -2,18 +2,11 @@ let cards = document.querySelectorAll(".card");
 let play = document.getElementById("play");
 let won = document.getElementById("won");
 let cont = document.getElementById("game");
-let show = document.getElementById("show");
+
 let tabcolor = [];
 
 let cardwin = 0;
-show.onclick = () => {
-  cards.forEach((card) => {
-    card.style.backgroundColor = "";
-    setTimeout(() => {
-      card.style.backgroundColor = "black";
-    }, 500);
-  });
-};
+
 cards.forEach((card) => {
   flipcard();
 
@@ -86,8 +79,9 @@ play.addEventListener("click", () => {
     card.style.backgroundColor = "black";
     card.classList.remove("flip", "move");
     card.classList.add("flipback");
-    cont.style.display = "block";
+    cont.style.display = "";
     won.style.display = "none";
+    play.style.display = "none";
   });
   flipcard();
 });
