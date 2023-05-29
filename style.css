@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+  height: 95vh;
+  border-radius: 10px;
+  background-color: #f8f6f4;
+}
+body{
+  background-color: #FC2947;
+}
+h1 {
+  text-align: center;
+  color: #537188;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.card[data-card="1"] {
+  background-color: #4c4c6d;
+}
+
+.card[data-card="2"] {
+  background-color: #4c4c6d;
+}
+
+.card[data-card="3"] {
+  background-color:  #1d267d;
+}
+.card[data-card="4"] {
+  background-color:  #1d267d;
+}
+.card[data-card="5"] {
+  background-color:  #ffd95a ;
+}
+.card[data-card="6"] {
+  background-color:  #ffd95a;
+}
+.card[data-card="7"] {
+  background-color:  #e76161;
+}
+.card[data-card="8"] {
+  background-color:  #e76161;
+}
+.card[data-card="9"] {
+  background-color:  #a0d8b3;
+}
+
+.card[data-card="10"] {
+  background-color:  #a0d8b3;
+}
+
+.card[data-card="11"] {
+  background-color:  #dbdfea;
+}
+.card[data-card="12"] {
+  background-color:  #dbdfea;
+}
+.card[data-card="13"] {
+  background-color:  #4200dd ;
+}
+.card[data-card="14"] {
+  background-color:  #4200dd;
+}
+.card[data-card="15"] {
+  background-color:  #ff0303;
+}
+.card[data-card="16"] {
+  background-color:  #ff0303;
+}
+.flip {
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease;
+}
+
+.flipback {
+  transform: rotateY(0deg);
+  transition: transform 0.5s ease;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#play,#show {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #cbb279;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#play,#show:hover {
+  background-color: #b3c890;
+}
+
+#play,#show:focus {
+  outline: none;
+}
+
+#play,#show:active {
+  background-color: #b3c890;
+}
+.move {
+  animation: move 0.4s ease-in-out;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-13px);
+  }
+  40% {
+    transform: translateX(13px);
+  }
+  60% {
+    transform: translateX(-8px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+}
